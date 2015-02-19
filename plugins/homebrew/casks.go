@@ -7,29 +7,28 @@ import (
 	"strings"
 )
 
-type Cask struct {
-	identifier string
-}
-
-func GetCasks() []Cask {
-	var casks []Cask
+func GetCasks() ([]string, error) {
+	var casks []string
 
 	brewCmd := exec.Command(CaskCmd, "list")
-	installedOut, _ := brewCmd.CombinedOutput()
+	installedOut, err := brewCmd.CombinedOutput()
+	if err != nil {
+		return nil, err
+	}
 	installed := strings.Fields(string(installedOut))
 	for _, v := range installed {
 		if len(v) > 0 {
-			casks = append(casks, Cask{v})
+			casks = append(casks, v)
 		}
 	}
 
-	return casks
+	return casks, nil
 }
 
-func InstallCasks(casks ...Cask) {
+func InstallCasks(casks ...string) {
 	args := []string{"install"}
 	for _, v := range casks {
-		args = append(args, v.identifier)
+		args = append(args, v)
 	}
 
 	brewCmd := exec.Command(CaskCmd, args...)

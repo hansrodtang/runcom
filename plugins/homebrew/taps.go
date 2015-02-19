@@ -7,34 +7,30 @@ import (
 	"strings"
 )
 
-type Tap struct {
-	identifier string
-}
-
 // http://pythonic.zoomquiet.io/data/20111223160257/index.html
 
-func GetTaps() ([]Tap, error) {
-	var taps []Tap
+func GetTaps() ([]string, error) {
+	var taps []string
 
 	brewCmd := exec.Command(BrewCmd, "tap")
 	installedOut, err := brewCmd.CombinedOutput()
 	if err != nil {
-		return []Tap{}, err
+		return nil, err
 	}
 	installed := strings.Fields(string(installedOut))
 	for _, v := range installed {
 		if len(v) > 0 {
-			taps = append(taps, Tap{v})
+			taps = append(taps, v)
 		}
 	}
 
 	return taps, nil
 }
 
-func SetTaps(taps ...Tap) {
+func SetTaps(taps ...string) {
 	args := []string{"tap"}
 	for _, v := range taps {
-		args = append(args, v.identifier)
+		args = append(args, v)
 	}
 
 	brewCmd := exec.Command(BrewCmd, args...)

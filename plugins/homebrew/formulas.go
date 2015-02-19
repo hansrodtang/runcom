@@ -7,36 +7,29 @@ import (
 	"strings"
 )
 
-type Formula struct {
-	identifier string
-}
-
-type Brew struct {
-}
-
 // http://pythonic.zoomquiet.io/data/20111223160257/index.html
 
-func GetInstalled() ([]Formula, error) {
-	var formulas []Formula
+func GetFormulas() ([]string, error) {
+	var formulas []string
 
 	brewCmd := exec.Command(BrewCmd, "leaves")
 	installedOut, err := brewCmd.CombinedOutput()
 	if err != nil {
-		return []Formula{}, err
+		return nil, err
 	}
 	installed := strings.Fields(string(installedOut))
 	for _, v := range installed {
 		if len(v) > 0 {
-			formulas = append(formulas, Formula{v})
+			formulas = append(formulas, v)
 		}
 	}
 	return formulas, nil
 }
 
-func Install(formulas ...Formula) {
+func Install(formulas ...string) {
 	args := []string{"install"}
 	for _, v := range formulas {
-		args = append(args, v.identifier)
+		args = append(args, v)
 	}
 
 	brewCmd := exec.Command(BrewCmd, args...)
