@@ -38,7 +38,7 @@ var ImportCommand = &cobra.Command{
 
 	Run: func(cmd *cobra.Command, args []string) {
 		if core.IsInstalled(BrewCmd) {
-			InstallCasks(GetCasks()...)
+			Import()
 		} else {
 			cmd.Println("Homebrew is not installed. Nothing to import.")
 		}
@@ -52,7 +52,7 @@ var ExportCommand = &cobra.Command{
 
 	Run: func(cmd *cobra.Command, args []string) {
 		if core.IsInstalled(BrewCmd) {
-			GetCasks()
+			Export()
 		} else {
 			cmd.Println("Homebrew is not installed. Nothing to import.")
 		}
