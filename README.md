@@ -30,7 +30,7 @@ runcom wizard
 
 ## Plugins
 
-- [List of available plugins and documentation]()
+- [List of available plugins and documentation](https://github.com/hansrodtang/runcom/wiki/Plugins)
 
 
 ## License
