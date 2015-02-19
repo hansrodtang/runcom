@@ -1,9 +1,19 @@
 package core
 
-import "os"
+import (
+	"fmt"
+	"os"
+
+	"github.com/spf13/viper"
+)
 
 func init() {
-	path := os.Getenv("DOT_PATH")
+	viper.SetDefault("Directory", Directory())
+	viper.SetEnvPrefix(Command)
+	viper.BindEnv("path")
+
+	path := viper.GetString("path")
+
 	if len(path) > 0 {
 		if !Exists(path) {
 			answer := Ask("Folder "+path+" does not exist. Use default?", true)
@@ -22,7 +32,10 @@ func init() {
 		if answer {
 			CreateDir(Directory())
 			directory = path
-			return
+		} else {
+			fmt.Printf("%s can not run without storage directory\n", Name)
+			os.Exit(1)
 		}
+
 	}
 }

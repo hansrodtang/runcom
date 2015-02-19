@@ -2,7 +2,7 @@ package core
 
 import "github.com/mitchellh/go-homedir"
 
-var directory string = "~/.config/dot"
+var directory string = "~/.config/runcom"
 
 const Command = "runcom"
 const Name = "Runcom"
