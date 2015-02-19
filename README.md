@@ -10,7 +10,7 @@ __:heavy_exclamation_mark: Still in heavy development and is not ready for usage
 
 ## Installation
 
-Prebuilt executables are available [here](test).
+Prebuilt executables are available [here](https://github.com/hansrodtang/runcom/releases).
 
 ```
   go get github.com/hansrodtang/runcom
