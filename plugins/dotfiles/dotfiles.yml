@@ -1,0 +1,48 @@
+vim:
+    - ~/.vimrc
+    - ~/.gvimrc
+    - ~/.nvimrc
+    - ~/.vim/bundle/
+    - ~/.vim/colors/
+    - ~/.nvim/bundle/
+    - ~/.nvim/colors/
+emacs:
+    - ~/.emacs
+zsh:
+    - ~/.zshrc
+    - ~/.zshenv
+    - ~/.zlogin
+    - ~/.zprofile
+    - ~/.zlogout
+    - ~/.antigen.sh
+    - ~/.antigen/antigen.sh
+lynx:
+    - ~/.lynxrc
+bash:
+    - ~/.bash_profile
+    - ~/.bash_logout
+    - ~/.bashrc
+shell:
+    - ~/.profile
+    - ~/.logout
+git:
+    - ~/.gitconfig
+    - ~/.gitattributes
+    - ~/.gitignore
+    - ~/.gitmodules
+    - ~/.git_excludes
+tmux:
+    - ~/.tmux.conf
+other:
+    - ~/.wgetrc
+    - ~/.curlrc
+    - ~/.screenrc
+    - ~/.dir_colors
+    - ~/.gopherrc
+    - ~/.telnetrc
+    - ~/.cshrc
+    - ~/.tshrc
+    - ~/.exrc
+    - ~/.gtkrc
+osx:
+    - ~/.osx

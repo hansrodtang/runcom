@@ -1,0 +1,18 @@
+homebrew:
+	- formulas:
+		- rust
+		- go
+		- coreutils
+	- casks:
+		- google-chrome
+		- iterm2
+
+dotfiles:
+	- file: .zshrc
+	  link: ~/.zshrc
+
+karabiner:
+	file: setup.sh
+
+seil:
+	file: setup.sh
