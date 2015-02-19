@@ -2,7 +2,6 @@ package core
 
 import (
 	"fmt"
-	"log"
 	"os"
 	"os/exec"
 
@@ -59,10 +58,8 @@ func Ask(message string, value bool) bool {
 	}
 
 	var response string
-	_, err := fmt.Scanln(&response)
-	if err != nil {
-		log.Fatal(err)
-	}
+	fmt.Scanln(&response)
+
 	yesResponses := []string{"y", "Y", "yes", "Yes", "YES"}
 	noResponses := []string{"n", "N", "no", "No", "NO"}
 	if contains(yesResponses, response) {
