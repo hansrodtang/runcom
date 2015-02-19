@@ -2,7 +2,7 @@
 
 [![Build](https://img.shields.io/travis/hansrodtang/runcom.svg?style=flat)](https://travis-ci.org/hansrodtang/runcom) [![Coverage](https://img.shields.io/coveralls/hansrodtang/runcom.svg?style=flat)](https://coveralls.io/r/hansrodtang/runcom) [![Issues](https://img.shields.io/github/issues/hansrodtang/runcom.svg?style=flat)](https://github.com/hansrodtang/runcom/issues) [![Tip](https://img.shields.io/gratipay/hansrodtang.svg?style=flat)](https://gratipay.com/hansrodtang/)
 [![License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](http://choosealicense.com/licenses/mit/)
-[![Documentation](http://img.shields.io/badge/documentation-wiki-blue.svg?style=flat)](http://godoc.org/github.com/hansrodtang/runcom)
+[![Documentation](http://img.shields.io/badge/documentation-wiki-blue.svg?style=flat)](https://github.com/hansrodtang/runcom/wiki)
 
 A [Dotfiles](http://dotfiles.github.io/) manager written in [Go](http://golang.org).
 
