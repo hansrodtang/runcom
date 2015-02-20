@@ -9,7 +9,7 @@ import (
 	"github.com/hansrodtang/runcom/core"
 	"github.com/hansrodtang/runcom/plugins"
 	_ "github.com/hansrodtang/runcom/plugins/dotfiles"
-	_ "github.com/hansrodtang/runcom/plugins/homebrew"
+	_ "github.com/hansrodtang/runcom/plugins/packages/homebrew"
 	// Other dependencies
 	"github.com/spf13/cobra"
 	"golang.org/x/crypto/ssh/terminal"
