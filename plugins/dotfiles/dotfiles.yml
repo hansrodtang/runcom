@@ -14,8 +14,8 @@ zsh:
     - ~/.zlogin
     - ~/.zprofile
     - ~/.zlogout
-    - ~/.antigen.sh
-    - ~/.antigen/antigen.sh
+    - ~/.antigen.zsh
+    - ~/.antigen/antigen.zsh
 lynx:
     - ~/.lynxrc
 bash:
