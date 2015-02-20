@@ -33,6 +33,9 @@ git:
     - ~/.git_excludes
 tmux:
     - ~/.tmux.conf
+linters:
+    - ~/.jshintrc
+    - ~/.csslintrc
 other:
     - ~/.wgetrc
     - ~/.curlrc
@@ -44,5 +47,16 @@ other:
     - ~/.tshrc
     - ~/.exrc
     - ~/.gtkrc
+    - ~/.npmrc
+    - ~/.rspec
+    - ~/.irbc
+    - ~/.agignore
+    - ~/.gemrc
+    - ~/.hgignore
+    - ~/.screenrc
+    - ~/.editorconfig
+    - ~/.Xdefaults
+
+
 osx:
     - ~/.osx
