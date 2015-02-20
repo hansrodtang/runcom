@@ -1,3 +1,5 @@
+// +build darwin
+
 package homebrew
 
 import (
@@ -7,6 +9,12 @@ import (
 
 	"github.com/hansrodtang/runcom/core"
 )
+
+type plugin struct {
+	Casks    []string `json:"casks"`
+	Formulas []string `json:"formulas"`
+	Taps     []string `json:"taps"`
+}
 
 func installBrew() bool {
 	installCmd := exec.Command("ruby", "-e", "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)")

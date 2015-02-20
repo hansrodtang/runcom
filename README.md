@@ -32,6 +32,11 @@ runcom wizard
 
 - [List of available plugins and documentation](https://github.com/hansrodtang/runcom/wiki/Plugins)
 
+Fork this repository and add your own today! Pull requests are welcomed!
+
+## Naming
+
+The name comes from [Run Commands](https://en.wikipedia.org/wiki/Run_commands).
 
 ## License
 

@@ -1,3 +1,5 @@
+// +build darwin
+
 package homebrew
 
 import (
@@ -17,16 +19,11 @@ func GetFormulas() ([]string, error) {
 	if err != nil {
 		return nil, err
 	}
-	installed := strings.Fields(string(installedOut))
-	for _, v := range installed {
-		if len(v) > 0 {
-			formulas = append(formulas, v)
-		}
-	}
+	formulas = strings.Fields(string(installedOut))
 	return formulas, nil
 }
 
-func Install(formulas ...string) {
+func Install(formulas []string) {
 	args := []string{"install"}
 	for _, v := range formulas {
 		args = append(args, v)

@@ -34,6 +34,12 @@ Complete documentation is available at http:/dots.github.io`,
 	}
 
 	MainCmd.AddCommand(WizardCmd)
+	MainCmd.AddCommand(
+		core.ConnectCommand,
+		core.PushCommand,
+		core.GetCommand,
+		core.UnpackCommand,
+		core.PackCommand)
 
 	if !terminal.IsTerminal(int(os.Stdout.Fd())) {
 		var test io.Writer

@@ -1,14 +1,19 @@
+// +build darwin
+
 package homebrew
 
 import (
+	"fmt"
+
 	"github.com/hansrodtang/runcom/core"
 	"github.com/hansrodtang/runcom/plugins"
 	"github.com/spf13/cobra"
 )
 
 const (
-	BrewCmd = "brew"
-	CaskCmd = "brew-cask"
+	BrewCmd    = "brew"
+	CaskCmd    = "brew-cask"
+	PluginName = "homebrew"
 )
 
 var Command = &cobra.Command{
@@ -26,7 +31,10 @@ Will ask to install Homebrew if not already installed`,
 				}
 			}
 		} else {
-			cmd.Usage()
+			err := cmd.Usage()
+			if err != nil {
+				fmt.Println(err)
+			}
 		}
 	},
 }
@@ -46,8 +54,8 @@ var ImportCommand = &cobra.Command{
 }
 
 var ExportCommand = &cobra.Command{
-	Use:   "import",
-	Short: "Imports packages from storage",
+	Use:   "export",
+	Short: "Exports packages to storage",
 	Long:  `Import your Homebrew packages from storage`,
 
 	Run: func(cmd *cobra.Command, args []string) {
@@ -61,5 +69,6 @@ var ExportCommand = &cobra.Command{
 
 func init() {
 	Command.AddCommand(ImportCommand)
-	plugins.Register("homebrew", Import, Export, Command)
+	Command.AddCommand(ExportCommand)
+	plugins.Register(PluginName, Import, Export, Command)
 }

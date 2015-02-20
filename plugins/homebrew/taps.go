@@ -1,3 +1,5 @@
+// +build darwin
+
 package homebrew
 
 import (
@@ -17,17 +19,11 @@ func GetTaps() ([]string, error) {
 	if err != nil {
 		return nil, err
 	}
-	installed := strings.Fields(string(installedOut))
-	for _, v := range installed {
-		if len(v) > 0 {
-			taps = append(taps, v)
-		}
-	}
-
+	taps = strings.Fields(string(installedOut))
 	return taps, nil
 }
 
-func SetTaps(taps ...string) {
+func SetTaps(taps []string) {
 	args := []string{"tap"}
 	for _, v := range taps {
 		args = append(args, v)
