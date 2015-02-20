@@ -12,10 +12,12 @@ __:heavy_exclamation_mark: Still in heavy development. Not everything in this do
 
 Prebuilt executables are available [here](https://github.com/hansrodtang/runcom/releases).
 
+
+Install with `go get`
 ```
   go get github.com/hansrodtang/runcom
 ```
-For those who prefer it, you can also use [gopkg.in](http://gopkg.in):
+For those who prefer stable releases, you can also use [gopkg.in](http://gopkg.in):
 
 ```
   go get gopkg.in/hansrodtang/runcom.v0
