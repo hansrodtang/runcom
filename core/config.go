@@ -1,6 +1,10 @@
 package core
 
-import "github.com/mitchellh/go-homedir"
+import (
+	"path/filepath"
+
+	"github.com/mitchellh/go-homedir"
+)
 
 var directory string = "~/.config/runcom"
 
