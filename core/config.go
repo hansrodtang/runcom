@@ -14,3 +14,8 @@ func Directory() string {
 	}
 	return dir
 }
+
+func PluginDirectory(plugin string) string {
+	dir := Directory()
+	return filepath.Join(dir, plugin)
+}
