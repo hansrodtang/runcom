@@ -3,21 +3,20 @@ package core
 import (
 	"fmt"
 	"os"
+	"path/filepath"
 
 	"github.com/spf13/viper"
 )
 
 func init() {
-	viper.SetConfigName("storage.rc")
+	//viper.SetConfigName("config")
 	viper.SetDefault("Directory", Directory())
+	viper.SetDefault("Storage", filepath.Join(Directory(), file))
 
 	viper.SetEnvPrefix(Command)
 	viper.BindEnv("path")
 
 	setup()
-
-	viper.ReadInConfig()
-
 }
 
 func setup() {
@@ -28,7 +27,6 @@ func setup() {
 			if answer {
 				directory = path
 				CreateDir(Directory())
-				viper.AddConfigPath(Directory())
 				return
 			}
 		} else {
@@ -40,8 +38,6 @@ func setup() {
 		answer := Ask("Folder "+directory+" does not exist. Create?", true)
 		if answer {
 			CreateDir(Directory())
-			viper.AddConfigPath(Directory())
-
 		} else {
 			fmt.Printf("%s can not run without storage directory\n", Name)
 			os.Exit(1)
