@@ -18,13 +18,11 @@ const (
 
 var search map[string][]string
 
-type symlink map[string]string
-
-type storage struct {
-	Links []symlink
-}
+var symlink map[string]string
 
 func init() {
+	symlink = make(map[string]string)
+
 	logger := log.New(os.Stdout, Name+" ", 0)
 
 	file, readErr := ioutil.ReadFile(ConfigFile)
