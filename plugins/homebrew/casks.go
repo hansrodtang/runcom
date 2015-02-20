@@ -17,17 +17,11 @@ func GetCasks() ([]string, error) {
 	if err != nil {
 		return nil, err
 	}
-	installed := strings.Fields(string(installedOut))
-	for _, v := range installed {
-		if len(v) > 0 {
-			casks = append(casks, v)
-		}
-	}
-
+	casks = strings.Fields(string(installedOut))
 	return casks, nil
 }
 
-func InstallCasks(casks ...string) {
+func InstallCasks(casks []string) {
 	args := []string{"install"}
 	for _, v := range casks {
 		args = append(args, v)
