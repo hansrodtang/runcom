@@ -39,7 +39,7 @@ var importCommand = &cobra.Command{
 	Short: "Import from storage",
 	Long:  `All software has versions. This is Hugo's`,
 	Run: func(cmd *cobra.Command, args []string) {
-		cmd.Println("Importing stuff")
+		Import()
 	},
 }
 
@@ -48,7 +48,7 @@ var exportCommand = &cobra.Command{
 	Short: "Export to storage",
 	Long:  `All software has versions. This is Hugo's`,
 	Run: func(cmd *cobra.Command, args []string) {
-		cmd.Println("Exporting stuff")
+		Export()
 	},
 }
 
