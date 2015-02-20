@@ -8,7 +8,7 @@ import (
 	"github.com/hansrodtang/runcom/core"
 )
 
-func Export() {
+func Backup() {
 	casks, caskErr := GetCasks()
 	taps, tapsErr := GetTaps()
 	formulas, formErr := GetFormulas()

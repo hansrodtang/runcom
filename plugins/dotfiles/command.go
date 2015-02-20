@@ -36,29 +36,29 @@ var unlinkCommand = &cobra.Command{
 	},
 }
 
-var importCommand = &cobra.Command{
-	Use:   "import",
-	Short: "Import from storage",
-	Long:  `All software has versions. This is Hugo's`,
+var restoreCommand = &cobra.Command{
+	Use:   "restore",
+	Short: "Restore dotfiles from storage",
+	Long:  `Restore dotfiles from storage`,
 	Run: func(cmd *cobra.Command, args []string) {
-		Import()
+		Restore()
 	},
 }
 
-var exportCommand = &cobra.Command{
-	Use:   "export",
-	Short: "Export to storage",
-	Long:  `All software has versions. This is Hugo's`,
+var backupCommand = &cobra.Command{
+	Use:   "backup",
+	Short: "Backup dotfiles to storage",
+	Long:  `Backup dotfiles to storage`,
 	Run: func(cmd *cobra.Command, args []string) {
-		Export()
+		Backup()
 	},
 }
 
 func init() {
 	Command.AddCommand(linkCommand)
 	Command.AddCommand(unlinkCommand)
-	Command.AddCommand(importCommand)
-	Command.AddCommand(exportCommand)
+	Command.AddCommand(restoreCommand)
+	Command.AddCommand(backupCommand)
 
-	plugins.Register(PluginName, Import, Export, Command)
+	plugins.Register(PluginName, Restore, Backup, Command)
 }

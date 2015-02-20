@@ -9,7 +9,7 @@ import (
 	"github.com/mitchellh/go-homedir"
 )
 
-func Export() {
+func Backup() {
 	for _, v := range search {
 		for _, file := range v {
 			absolute, _ := homedir.Expand(file)

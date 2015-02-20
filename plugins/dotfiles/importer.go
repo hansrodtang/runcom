@@ -8,7 +8,7 @@ import (
 	"github.com/hansrodtang/runcom/core"
 )
 
-func Import() {
+func Restore() {
 	err := core.Get(PluginName, &symlink)
 	if err != nil {
 		fmt.Println(err)
