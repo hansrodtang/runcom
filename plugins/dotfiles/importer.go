@@ -2,8 +2,18 @@
 
 package dotfiles
 
-import "fmt"
+import (
+	"fmt"
+
+	"github.com/hansrodtang/runcom/core"
+)
 
 func Import() {
-	fmt.Println("What?")
+	err := core.Get(PluginName, &symlink)
+	if err != nil {
+		fmt.Println(err)
+	}
+	for k, v := range symlink {
+		fmt.Println(k, v)
+	}
 }
