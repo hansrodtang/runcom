@@ -6,22 +6,22 @@ import (
 	"github.com/spf13/cobra"
 )
 
-type ExporterFunc func()
-type ImporterFunc func()
+type BackupFunc func()
+type RestoreFunc func()
 type CommandOb *cobra.Command
 
 type plugin struct {
 	Name    string
-	Import  ImporterFunc
-	Export  ExporterFunc
+	Restore RestoreFunc
+	Backup  BackupFunc
 	Command CommandOb
 }
 
 // Formats is the list of registered formats.
 var plugins []plugin
 
-func Register(name string, importer ImporterFunc, exporter ExporterFunc, command CommandOb) {
-	plugins = append(plugins, plugin{name, importer, exporter, command})
+func Register(name string, restore RestoreFunc, backup BackupFunc, command CommandOb) {
+	plugins = append(plugins, plugin{name, restore, backup, command})
 }
 
 func Get(name string) (plugin, error) {
