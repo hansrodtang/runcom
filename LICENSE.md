@@ -1,6 +1,6 @@
 #The MIT License
 
-__Copyright © 2014 Hans Rødtang__
+__Copyright © 2015 Hans Rødtang__
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
