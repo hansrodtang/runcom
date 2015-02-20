@@ -21,21 +21,21 @@ func Valid(filename string) bool {
 func IsSymbolic(filename string) bool {
 	fi, err := os.Lstat(filename)
 	if err != nil {
-		return false
+		return true
 	}
 	if fi.Mode()&os.ModeSymlink == os.ModeSymlink {
 		fmt.Println(filename + " is a symbolic link.")
-		return false
-	} else {
 		return true
+	} else {
+		return false
 	}
 }
 
 func Exists(filename string) bool {
-	if _, err := os.Stat(filename); err == nil {
-		return true
+	if _, err := os.Stat(filename); os.IsNotExist(err) {
+		return false
 	}
-	return false
+	return true
 }
 
 func CreateDir(directory string) bool {
