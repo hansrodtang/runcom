@@ -33,7 +33,6 @@ Complete documentation is available at http:/dots.github.io`,
 		MainCmd.AddCommand(plugin.Command)
 	}
 
-	MainCmd.AddCommand(WizardCmd)
 	MainCmd.AddCommand(
 		core.ConnectCommand,
 		core.PushCommand,
