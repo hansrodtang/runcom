@@ -18,4 +18,6 @@ func Export() {
 			}
 		}
 	}
+	core.Add(PluginName, symlink)
+	core.Save()
 }

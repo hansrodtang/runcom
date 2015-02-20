@@ -7,6 +7,8 @@ import (
 	"github.com/spf13/cobra"
 )
 
+const PluginName = "dotfiles"
+
 var Command = &cobra.Command{
 	Use:   "dotfiles",
 	Short: "Manage dotfiles",
@@ -58,5 +60,5 @@ func init() {
 	Command.AddCommand(importCommand)
 	Command.AddCommand(exportCommand)
 
-	plugins.Register("dotfiles", Import, Export, Command)
+	plugins.Register(PluginName, Import, Export, Command)
 }
