@@ -32,6 +32,26 @@ var GetCommand = &cobra.Command{
 	},
 }
 
+var BackupCommand = &cobra.Command{
+	Use:   "backup",
+	Short: "Backup configuration to storage",
+	Long:  `Filler`,
+
+	Run: func(cmd *cobra.Command, args []string) {
+
+	},
+}
+
+var RestoreCommand = &cobra.Command{
+	Use:   "restore",
+	Short: "Restore configuration from storage",
+	Long:  `Filler`,
+
+	Run: func(cmd *cobra.Command, args []string) {
+
+	},
+}
+
 // Add to plugins?
 var UnpackCommand = &cobra.Command{
 	Use:   "unpack",
