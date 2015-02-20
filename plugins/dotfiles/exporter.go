@@ -3,18 +3,19 @@
 package dotfiles
 
 import (
-	"fmt"
+	"path/filepath"
 
 	"github.com/hansrodtang/runcom/core"
 	"github.com/mitchellh/go-homedir"
 )
 
 func Export() {
-	for _, v := range files {
+	for _, v := range search {
 		for _, file := range v {
 			absolute, _ := homedir.Expand(file)
 			if core.Valid(absolute) {
-				fmt.Println(file + " exists")
+				_, filename := filepath.Split(absolute)
+				symlink[file] = filename
 			}
 		}
 	}

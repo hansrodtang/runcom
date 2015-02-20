@@ -7,6 +7,7 @@ import (
 )
 
 var directory string = "~/.config/runcom"
+var file string = "storage.json"
 
 const Command = "runcom"
 const Name = "Runcom"

@@ -16,7 +16,7 @@ const (
 	Name       = "[dotfiles]"
 )
 
-var files map[string][]string
+var search map[string][]string
 
 type symlink map[string]string
 
@@ -32,7 +32,7 @@ func init() {
 		logger.Fatalf("Configuration error: %v \n", readErr)
 	}
 
-	parseErr := yaml.Unmarshal(file, &files)
+	parseErr := yaml.Unmarshal(file, &search)
 	if parseErr != nil {
 		logger.Fatalf("Parse error: %v \n", parseErr)
 	}
