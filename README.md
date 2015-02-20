@@ -6,7 +6,7 @@
 
 A [Dotfiles](http://dotfiles.github.io/) manager written in [Go](http://golang.org).
 
-__:heavy_exclamation_mark: Still in heavy development and is not ready for usage. Please wait for the 1.0 release :heavy_exclamation_mark:__
+__:heavy_exclamation_mark: Still in heavy development. Not everything in this document is accurate. Please wait for the 1.0 release :heavy_exclamation_mark:__
 
 ## Installation
 
@@ -20,12 +20,25 @@ For those who prefer it, you can also use [gopkg.in](http://gopkg.in):
 ```
   go get gopkg.in/hansrodtang/runcom.v0
 ```
+You can also download a prebuilt executable
+```
+  curl -O https://github.com/hansrodtang/runcom/releases
+```
 
 ## Usage
-
+Here are some example commands.
 
 ```sh
-runcom wizard
+# Download from GitHub
+runcom get hansrodtang/dotfiles
+# Pull changes from GitHub
+runcom pull hansrodtang/dotfiles
+# Backup local configuration
+runcom backup
+# Upload to GitHub
+runcom push hansrodtang/dotfiles
+# Restore from configuration
+runcom restore
 ```
 
 ## Plugins
@@ -33,6 +46,16 @@ runcom wizard
 - [List of available plugins and documentation](https://github.com/hansrodtang/runcom/wiki/Plugins)
 
 Fork this repository and add your own today! Pull requests are welcomed!
+
+## Backends
+
+Runcom supports storing your configuration in multiple different locations/services.
+
+- Git (additional integration with GitHub)
+- Dropbox
+- Compressed files
+
+More coming.
 
 ## Naming
 
