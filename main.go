@@ -16,29 +16,32 @@ import (
 	"golang.org/x/crypto/ssh/terminal"
 )
 
-func main() {
-	viper.SetDefault("backend", Directory())
+const defaultBackend = "directory"
 
-	var MainCmd = &cobra.Command{
+func main() {
+	viper.SetDefault("backend", defaultBackend)
+
+	var mainCmd = &cobra.Command{
 		Use:   core.Command,
 		Short: core.Name + " is a simple and flexible configuration manager",
 		Long: `A Simple and Flexible Configuration Manager..
 Complete documentation is available at http:/dots.github.io`,
-		/*Run: func(cmd *cobra.Command, args []string) {
+		Run: func(cmd *cobra.Command, args []string) {
 			// Do Stuff Here
-		},*/
+
+		},
 	}
 
-	mainCmd.Flags().Int("backend", "git", "Storage backend to use for saving configuration")
-	viper.BindPFlag("backend", mainCmd.Flags().Lookup("backend"))
+	mainCmd.PersistentFlags().String("backend", defaultBackend, "Storage backend to use for saving configuration")
+	viper.BindPFlag("backend", mainCmd.PersistentFlags().Lookup("backend"))
 
 	plugs := plugins.GetAll()
 
 	for _, plugin := range plugs {
-		MainCmd.AddCommand(plugin.Command)
+		mainCmd.AddCommand(plugin.Command)
 	}
 
-	MainCmd.AddCommand(
+	mainCmd.AddCommand(
 		core.ConnectCommand,
 		core.PushCommand,
 		core.GetCommand,
@@ -48,8 +51,8 @@ Complete documentation is available at http:/dots.github.io`,
 	if !terminal.IsTerminal(int(os.Stdout.Fd())) {
 		var test io.Writer
 		test = bufio.NewWriter(test)
-		MainCmd.SetOutput(test)
+		mainCmd.SetOutput(test)
 	}
 
-	MainCmd.Execute()
+	mainCmd.Execute()
 }
