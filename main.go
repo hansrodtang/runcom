@@ -12,10 +12,12 @@ import (
 	_ "github.com/hansrodtang/runcom/plugins/packages/homebrew"
 	// Other dependencies
 	"github.com/spf13/cobra"
+	"github.com/spf13/viper"
 	"golang.org/x/crypto/ssh/terminal"
 )
 
 func main() {
+	viper.SetDefault("backend", Directory())
 
 	var MainCmd = &cobra.Command{
 		Use:   core.Command,
@@ -26,6 +28,9 @@ Complete documentation is available at http:/dots.github.io`,
 			// Do Stuff Here
 		},*/
 	}
+
+	mainCmd.Flags().Int("backend", "git", "Storage backend to use for saving configuration")
+	viper.BindPFlag("backend", mainCmd.Flags().Lookup("backend"))
 
 	plugs := plugins.GetAll()
 
