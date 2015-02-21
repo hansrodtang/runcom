@@ -1,0 +1,4 @@
+name: Various shells
+files:
+    - .cshrc
+    - .tshrc

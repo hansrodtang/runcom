@@ -1,0 +1,4 @@
+name: Antigen
+files:
+  - .antigen.zsh
+  - .antigen/antigen.zsh
