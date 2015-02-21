@@ -2,3 +2,7 @@ name: Git
 files:
   - .gitconfig
   - .config/git/ignore
+  - .gitignore
+  - .gitignore_global
+  - .config/git/attributes
+  - .gitattributes

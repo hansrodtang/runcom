@@ -2,3 +2,4 @@ name: Mercurial
 files:
   - .hgrc
   - .hgignore_global
+  - .hgignore

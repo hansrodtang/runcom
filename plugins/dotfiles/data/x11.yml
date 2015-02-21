@@ -2,3 +2,5 @@ name: X11
 files:
   - .Xresources
   - .fonts
+  - .Xdefaults # Deprecated in X11
+  - .xinitrc
