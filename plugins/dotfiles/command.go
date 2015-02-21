@@ -3,18 +3,25 @@
 package dotfiles
 
 import (
+	"github.com/hansrodtang/runcom/core"
 	"github.com/hansrodtang/runcom/plugins"
 	"github.com/spf13/cobra"
 )
 
 const PluginName = "dotfiles"
 
+var print core.PrintFunc
+
+func init() {
+	print = core.Printer(PluginName)
+}
+
 var Command = &cobra.Command{
 	Use:   "dotfiles",
 	Short: "Manage dotfiles",
 	Long:  `All software has versions. This is Hugo's`,
 	Run: func(cmd *cobra.Command, args []string) {
-		cmd.Println("Hugo Static Site Generator v0.9 -- HEAD")
+		print("Default command")
 	},
 }
 
@@ -23,7 +30,7 @@ var linkCommand = &cobra.Command{
 	Short: "Link a file to storage",
 	Long:  `All software has versions. This is Hugo's`,
 	Run: func(cmd *cobra.Command, args []string) {
-		cmd.Println("Linking stuff")
+		print("Linking stuff")
 	},
 }
 
@@ -32,7 +39,7 @@ var unlinkCommand = &cobra.Command{
 	Short: "Unlink a file from storage",
 	Long:  `All software has versions. This is Hugo's`,
 	Run: func(cmd *cobra.Command, args []string) {
-		cmd.Println("Unlinking stuff")
+		print("Unlinking stuff")
 	},
 }
 

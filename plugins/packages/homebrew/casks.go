@@ -3,7 +3,6 @@
 package homebrew
 
 import (
-	"fmt"
 	"os"
 	"os/exec"
 	"strings"
@@ -33,7 +32,7 @@ func InstallCasks(casks []string) {
 	brewCmd.Stdin = os.Stdin
 
 	if err := brewCmd.Start(); err != nil {
-		fmt.Println("An error occured: ", err)
+		print(err)
 	}
 	brewCmd.Wait()
 

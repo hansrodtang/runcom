@@ -3,7 +3,6 @@
 package homebrew
 
 import (
-	"fmt"
 	"os"
 	"os/exec"
 
@@ -23,7 +22,7 @@ func installBrew() bool {
 	installCmd.Stdin = os.Stdin
 
 	if err := installCmd.Start(); err != nil {
-		fmt.Println("An error occured: ", err)
+		print(err)
 		return false
 	}
 	installCmd.Wait()
@@ -44,7 +43,7 @@ func installCask() bool {
 	installCmd.Stdin = os.Stdin
 
 	if err := installCmd.Start(); err != nil {
-		fmt.Println("An error occured: ", err)
+		print("An error occured: ", err)
 		return false
 	}
 	installCmd.Wait()

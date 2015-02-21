@@ -3,8 +3,6 @@
 package homebrew
 
 import (
-	"fmt"
-
 	"github.com/hansrodtang/runcom/core"
 	"github.com/hansrodtang/runcom/plugins"
 	"github.com/spf13/cobra"
@@ -15,6 +13,12 @@ const (
 	CaskCmd    = "brew-cask"
 	PluginName = "homebrew"
 )
+
+var print core.PrintFunc
+
+func init() {
+	print = core.Printer(PluginName)
+}
 
 var Command = &cobra.Command{
 	Use:   "homebrew",
@@ -27,20 +31,20 @@ Will ask to install Homebrew if not already installed`,
 			answer := core.Ask("Homebrew is not installed, install now?", true)
 			if answer == true {
 				if !installBrew() {
-					cmd.Println("Homebrew installation unsuccessful")
+					print("Homebrew installation unsuccessful")
 				}
 			}
 		} else {
 			err := cmd.Usage()
 			if err != nil {
-				fmt.Println(err)
+				print(err)
 			}
 		}
 	},
 }
 
 var restoreCommand = &cobra.Command{
-	Use:   "import",
+	Use:   "restore",
 	Short: "Restores packages from storage",
 	Long:  `Restore your Homebrew packages from storage`,
 
@@ -48,7 +52,7 @@ var restoreCommand = &cobra.Command{
 		if core.IsInstalled(BrewCmd) {
 			Restore()
 		} else {
-			cmd.Println("Homebrew is not installed. Nothing to import.")
+			print("Homebrew is not installed. Nothing to import.")
 		}
 	},
 }
@@ -62,7 +66,7 @@ var backupCommand = &cobra.Command{
 		if core.IsInstalled(BrewCmd) {
 			Backup()
 		} else {
-			cmd.Println("Homebrew is not installed. Nothing to import.")
+			print("Homebrew is not installed. Nothing to import.")
 		}
 	},
 }

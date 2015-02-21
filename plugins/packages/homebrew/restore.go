@@ -2,17 +2,13 @@
 
 package homebrew
 
-import (
-	"fmt"
-
-	"github.com/hansrodtang/runcom/core"
-)
+import "github.com/hansrodtang/runcom/core"
 
 func Restore() {
 	var p plugin
 	err := core.Get(PluginName, &p)
 	if err != nil {
-		fmt.Println(err)
+		print(err)
 	}
 
 	SetTaps(p.Taps)
