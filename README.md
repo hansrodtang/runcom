@@ -1,4 +1,4 @@
-# ![](http://i.imgur.com/IPUdmyu.png) Runcom
+# [![Logo](http://i.imgur.com/IPUdmyu.png)](http://hansrodtang.github.io/runcom/) Runcom
 
 [![Build](https://img.shields.io/travis/hansrodtang/runcom.svg?style=flat)](https://travis-ci.org/hansrodtang/runcom) [![Coverage](https://img.shields.io/coveralls/hansrodtang/runcom.svg?style=flat)](https://coveralls.io/r/hansrodtang/runcom) [![Tip](https://img.shields.io/gratipay/hansrodtang.svg?style=flat)](https://gratipay.com/hansrodtang/)
 [![License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](http://choosealicense.com/licenses/mit/)
