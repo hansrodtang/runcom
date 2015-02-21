@@ -1,4 +1,4 @@
-# Runcom
+# ![](http://i.imgur.com/IPUdmyu.png) Runcom
 
 [![Build](https://img.shields.io/travis/hansrodtang/runcom.svg?style=flat)](https://travis-ci.org/hansrodtang/runcom) [![Coverage](https://img.shields.io/coveralls/hansrodtang/runcom.svg?style=flat)](https://coveralls.io/r/hansrodtang/runcom) [![Tip](https://img.shields.io/gratipay/hansrodtang.svg?style=flat)](https://gratipay.com/hansrodtang/)
 [![License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](http://choosealicense.com/licenses/mit/)
@@ -69,3 +69,5 @@ The name comes from [Run Commands](https://en.wikipedia.org/wiki/Run_commands).
 ## License
 
 This software is licensed under the [MIT license](LICENSE.md).
+
+Icon is created by [Arhur Slain](http://thenounproject.com/ArtZ91/) and is licensed under [Creative Commons – Attribution (CC BY 3.0)](https://creativecommons.org/licenses/by/3.0/us/).
