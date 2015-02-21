@@ -1,0 +1,4 @@
+name: Cyberduck
+files:
+  - Library/Application Support/Cyberduck
+  - Library/Preferences/ch.sudo.cyberduck.plist

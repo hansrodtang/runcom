@@ -1,0 +1,5 @@
+name: Livestreamer
+files:
+  - .livestreamerrc
+  - .config/livestreamer/config
+  - .config/livestreamer/plugins

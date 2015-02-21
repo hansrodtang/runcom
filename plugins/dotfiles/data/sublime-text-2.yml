@@ -1,0 +1,5 @@
+name: Sublime Text 2
+files:
+  - Library/Application Support/Sublime Text 2/Installed Packages
+  - Library/Application Support/Sublime Text 2/Packages
+  - Library/Application Support/Sublime Text 2/Pristine Packages

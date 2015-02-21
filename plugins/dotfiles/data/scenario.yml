@@ -1,0 +1,4 @@
+name: Scenario
+files:
+  - Library/Preferences/com.lagente.scenario.plist
+  - Library/Scenario

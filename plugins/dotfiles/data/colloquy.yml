@@ -1,0 +1,4 @@
+name: Colloquy
+files:
+  - Library/Preferences/info.colloquy.plist
+  - Library/Application Support/Colloquy

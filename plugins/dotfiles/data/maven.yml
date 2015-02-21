@@ -1,0 +1,3 @@
+name: Maven
+files:
+  - .m2/settings.xml

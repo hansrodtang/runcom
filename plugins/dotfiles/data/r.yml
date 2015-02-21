@@ -1,0 +1,5 @@
+name: R
+files:
+  - .R
+  - .Rhistory
+  - .Rprofile

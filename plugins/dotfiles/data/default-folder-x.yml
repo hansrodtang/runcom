@@ -1,0 +1,5 @@
+name: Default Folder X
+files:
+  - Library/Preferences/com.stclairsoft.DefaultFolderX.favorites.plist
+  - Library/Preferences/com.stclairsoft.DefaultFolderX.plist
+  - Library/Preferences/com.stclairsoft.DefaultFolderX.settings.plist

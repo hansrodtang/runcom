@@ -1,0 +1,5 @@
+name: ExpanDrive
+files:
+  - Library/Application Support/ExpanDrive
+  - Preferences/com.expandrive.ExpanDrive2.plist
+  - Preferences/com.expandrive.ExpanDrive3.plist

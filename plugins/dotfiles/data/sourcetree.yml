@@ -1,0 +1,6 @@
+name: SourceTree
+files:
+  - Library/Application Support/SourceTree/browser.plist
+  - Library/Application Support/SourceTree/hgrc_sourcetree
+  - Library/Application Support/SourceTree/hostingservices.plist
+  - Library/Application Support/SourceTree/sourcetree.license

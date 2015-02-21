@@ -1,0 +1,4 @@
+name: Quicksilver
+files:
+  - Library/Preferences/com.blacktree.Quicksilver.plist
+  - Library/Application Support/Quicksilver

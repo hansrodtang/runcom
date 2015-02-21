@@ -1,0 +1,4 @@
+name: Seil
+files:
+  - Library/Preferences/org.pqrs.PCKeyboardHack.plist
+  - Library/Preferences/org.pqrs.Seil.plist

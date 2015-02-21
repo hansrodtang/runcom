@@ -1,0 +1,4 @@
+name: Brackets
+files:
+  - Library/Application Support/Brackets
+  - Library/Preferences/io.brackets.appshell.plist

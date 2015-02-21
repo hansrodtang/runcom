@@ -1,0 +1,6 @@
+name: Karabiner
+files:
+  - Library/Preferences/org.pqrs.Karabiner.plist
+  - Library/Preferences/org.pqrs.Karabiner-AXNotifier.plist
+  - Library/Preferences/org.pqrs.Karabiner.multitouchextension.plist
+  - Library/Application Support/Karabiner/private.xml

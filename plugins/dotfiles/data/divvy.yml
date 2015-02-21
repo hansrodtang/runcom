@@ -1,0 +1,4 @@
+name: Divvy
+files:
+  - Library/Preferences/com.mizage.direct.Divvy.plist
+  - Library/Preferences/com.mizage.Divvy.plist

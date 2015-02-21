@@ -1,0 +1,4 @@
+name: Poedit
+files:
+  - Library/Preferences/net.poedit.Poedit.cfg
+  - Library/Preferences/net.poedit.Poedit.plist

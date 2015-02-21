@@ -1,0 +1,6 @@
+name: Byobu
+files:
+  - .byobu
+  - .byoburc
+  - .byoburc.tmux
+  - .byoburc.screen

@@ -1,0 +1,4 @@
+name: Cartographica
+files:
+  - Library/Application Support/Cartographica
+  - Library/Preferences/com.ClueTrust.Cartographica.plist

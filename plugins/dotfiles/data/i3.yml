@@ -1,0 +1,4 @@
+name: i3
+files:
+  - .i3/config
+  - .i3status.conf

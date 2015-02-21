@@ -1,0 +1,7 @@
+name: Ruby
+files:
+  - .gemrc
+  - .irbrc
+  - .gem/credentials
+  - .pryrc
+  - .aprc

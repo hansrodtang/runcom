@@ -1,0 +1,4 @@
+name: Arara
+files:
+  - .araraconfig.yaml
+  - araraconfig.yaml

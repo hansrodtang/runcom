@@ -1,0 +1,4 @@
+name: Emacs
+files:
+  - .emacs
+  - .emacs.d

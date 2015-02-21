@@ -1,0 +1,5 @@
+name: Textual
+files:
+  - Library/Application Support/Textual IRC
+  - Library/Preferences/com.codeux.irc.textual.plist
+  - Library/Containers/com.codeux.irc.textual/Data/Library/Preferences/com.codeux.irc.textual.plist

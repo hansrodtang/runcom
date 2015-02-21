@@ -1,0 +1,6 @@
+name: SSH
+files:
+ # - .ssh
+  - .ssh/config
+  - .ssh/known_hosts
+  - .ssh/authorized_keys

@@ -1,0 +1,10 @@
+name: Bash
+files:
+  - .bash_login
+  - .bash_logout
+  - .bashrc
+  - .profile
+  - .bash_profile
+  - .inputrc
+  - .aliases
+  - .bash_aliases

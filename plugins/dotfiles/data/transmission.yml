@@ -1,0 +1,4 @@
+name: Transmission
+files:
+  - Library/Preferences/org.m0k.transmission.plist
+  - Library/Application Support/Transmission/blocklists

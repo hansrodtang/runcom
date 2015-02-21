@@ -1,0 +1,5 @@
+name: Path Finder
+files:
+  - Library/Application Support/Path Finder/Settings
+  - Library/Preferences/com.cocoatech.PathFinder.plist
+  - Library/Application Support/Path Finder/PlugIns

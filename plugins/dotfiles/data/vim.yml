@@ -1,0 +1,16 @@
+name: Vim
+files:
+  - .vim/ftplugin
+  - .vim/indent
+  - .vimrc
+  - .gvimrc.before
+  - .vim/autoload
+  - .vim/doc
+  - .vimrc.before
+  - .vim/ftdetect
+  - .vim/syntax
+  - .vimrc.after
+  - .gvimrc
+  - .gvimrc.after
+  - .vim/bundle
+  - .vim/colors

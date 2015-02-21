@@ -1,0 +1,4 @@
+name: newsbeuter
+files:
+  - .newsbeuter/config
+  - .newsbeuter/urls

@@ -1,0 +1,4 @@
+name: MacOSX
+files:
+  - .MacOSX
+  - Library/KeyBindings/DefaultKeyBinding.dict

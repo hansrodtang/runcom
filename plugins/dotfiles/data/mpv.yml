@@ -1,0 +1,5 @@
+name: MPV
+files:
+  - .mpv/channels.conf
+  - .mpv/config
+  - .mpv/input.conf

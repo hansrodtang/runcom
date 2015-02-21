@@ -1,0 +1,5 @@
+name: PhpStorm 7
+files:
+  - Library/Application Support/WebIde70
+  - Library/Preferences/WebIde70
+  - Library/Preferences/com.jetbrains.PhpStorm.plist

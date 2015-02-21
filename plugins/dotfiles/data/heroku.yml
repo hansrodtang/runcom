@@ -1,0 +1,4 @@
+name: Heroku
+files:
+  - .heroku/accounts
+  - .heroku/plugins

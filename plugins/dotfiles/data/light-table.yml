@@ -1,0 +1,5 @@
+name: Light Table
+files:
+  - Library/Application Support/LightTable/plugins
+  - Library/Application Support/LightTable/settings
+  - Library/Preferences/com.kodowa.LightTable.plist

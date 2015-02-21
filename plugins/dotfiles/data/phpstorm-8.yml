@@ -1,0 +1,5 @@
+name: PhpStorm 8
+files:
+  - Library/Application Support/WebIde80
+  - Library/Preferences/WebIde80
+  - Library/Preferences/com.jetbrains.PhpStorm.plist

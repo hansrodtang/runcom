@@ -1,0 +1,4 @@
+name: mpd
+files:
+  - .mpd
+  - .mpdconf

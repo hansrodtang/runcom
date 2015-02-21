@@ -1,0 +1,4 @@
+name: XLD
+files:
+  - Library/Application Support/XLD
+  - Library/Preferences/jp.tmkk.XLD.plist

@@ -1,0 +1,5 @@
+name: Sublime Text 3
+files:
+  - Library/Application Support/Sublime Text 3/Packages/User
+  - .config/sublime-text-3/Installed Packages
+  - .config/sublime-text-3/Packages

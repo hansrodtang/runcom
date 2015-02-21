@@ -1,0 +1,3 @@
+name: Julia
+files:
+  - .juliarc.jl

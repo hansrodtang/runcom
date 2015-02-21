@@ -1,0 +1,4 @@
+name: Skitch
+files:
+  - Library/Preferences/com.plasq.skitch.plist
+  - Library/Preferences/com.plasq.skitch.history

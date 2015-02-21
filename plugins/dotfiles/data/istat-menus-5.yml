@@ -1,0 +1,4 @@
+name: iStat Menus
+files:
+  - Library/Preferences/com.bjango.istatmenus.plist
+  - Library/Preferences/com.bjango.istatmenus5.extras.plist

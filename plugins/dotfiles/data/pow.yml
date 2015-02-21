@@ -1,0 +1,5 @@
+name: Pow
+files:
+  - .powrc
+  - .powconfig
+  - .powenv

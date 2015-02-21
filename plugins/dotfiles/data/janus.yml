@@ -1,0 +1,5 @@
+name: Janus
+files:
+  - .janus
+  - .vimrc.before
+  - .vimrc.after

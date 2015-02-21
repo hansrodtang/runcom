@@ -1,0 +1,4 @@
+name: Tower
+files:
+  - Library/Preferences/com.fournova.Tower.plist
+  - Library/Application Support/Tower

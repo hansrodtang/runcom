@@ -1,0 +1,8 @@
+name: RubyMine
+files:
+  - Library/Application Support/RubyMine50
+  - Library/Preferences/RubyMine50
+  - Library/Application Support/RubyMine60
+  - Library/Preferences/RubyMine60
+  - Library/Application Support/RubyMine40
+  - Library/Preferences/RubyMine40

@@ -1,0 +1,4 @@
+name: Charles
+files:
+  - Library/Preferences/com.xk72.charles.config
+  - Library/Application Support/Charles

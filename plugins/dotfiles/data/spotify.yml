@@ -1,0 +1,3 @@
+name: Spotify
+files:
+  - Library/Preferences/com.spotify.client.plist

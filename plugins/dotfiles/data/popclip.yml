@@ -1,0 +1,4 @@
+name: PopClip
+files:
+  - Library/Application Support/PopClip
+  - Library/Preferences/com.pilotmoon.popclip.plist

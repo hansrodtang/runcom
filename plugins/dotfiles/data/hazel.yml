@@ -1,0 +1,4 @@
+name: Hazel
+files:
+  - Library/Application Support/Hazel
+  - Library/Preferences/com.noodlesoft.Hazel.plist

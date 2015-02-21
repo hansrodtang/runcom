@@ -1,0 +1,4 @@
+name: BetterSnapTool
+files:
+  - Library/Preferences/com.hegenberg.BetterSnapTool.plist
+  - Library/Application Support/BetterSnapTool

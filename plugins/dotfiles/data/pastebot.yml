@@ -1,0 +1,5 @@
+name: Pastebot
+files:
+  - Library/Preferences/com.tapbots.PastebotSync.stats.plist
+  - Library/Preferences/com.tapbots.PastebotSync.plist
+  - Library/Preferences/com.tapbots.PastebotSync.prefPane.plist

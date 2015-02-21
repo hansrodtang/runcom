@@ -1,0 +1,3 @@
+name: JSHint
+files:
+  - .jshintrc
