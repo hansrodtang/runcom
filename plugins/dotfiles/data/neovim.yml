@@ -1,0 +1,13 @@
+name: Neovim
+files:
+  - .nvim/ftplugin
+  - .nvim/indent
+  - .nvimrc
+  - .nvim/autoload
+  - .nvim/doc
+  - .nvimrc.before
+  - .nvim/ftdetect
+  - .nvim/syntax
+  - .nvimrc.after
+  - .nvim/bundle
+  - .nvim/colors
