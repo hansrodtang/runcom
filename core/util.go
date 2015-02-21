@@ -24,7 +24,7 @@ func IsSymbolic(filename string) bool {
 		return true
 	}
 	if fi.Mode()&os.ModeSymlink == os.ModeSymlink {
-		fmt.Println(filename + " is a symbolic link.")
+		print(filename + " is a symbolic link.")
 		return true
 	} else {
 		return false
@@ -86,4 +86,17 @@ func contains(s []string, e string) bool {
 		}
 	}
 	return false
+}
+
+type PrintFunc func(...interface{})
+
+func Printer(plugin string) PrintFunc {
+	g := color.New(color.FgGreen).SprintfFunc()
+	p := g("[%s] ", plugin)
+
+	print := func(a ...interface{}) {
+		fmt.Print(p)
+		fmt.Println(a...)
+	}
+	return print
 }

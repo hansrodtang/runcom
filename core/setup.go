@@ -8,6 +8,12 @@ import (
 	"github.com/spf13/viper"
 )
 
+var print PrintFunc
+
+func init() {
+	print = Printer(Command)
+}
+
 func init() {
 	//viper.SetConfigName("config")
 	viper.SetDefault("directory", Directory())
