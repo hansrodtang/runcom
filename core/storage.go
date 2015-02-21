@@ -50,7 +50,7 @@ func Get(plugin string, content interface{}) error {
 
 // Read fetches plugin data from file
 func Read() error {
-	dat, readErr := ioutil.ReadFile(viper.GetString("Storage"))
+	dat, readErr := ioutil.ReadFile(viper.GetString("storage"))
 	if readErr != nil {
 		return readErr
 	}
@@ -69,7 +69,7 @@ func Save() error {
 		return err
 	}
 
-	f, err := os.Create(viper.GetString("Storage"))
+	f, err := os.Create(viper.GetString("storage"))
 	if err != nil {
 		return err
 	}

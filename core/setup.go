@@ -10,8 +10,8 @@ import (
 
 func init() {
 	//viper.SetConfigName("config")
-	viper.SetDefault("Directory", Directory())
-	viper.SetDefault("Storage", filepath.Join(Directory(), file))
+	viper.SetDefault("directory", Directory())
+	viper.SetDefault("storage", filepath.Join(Directory(), file))
 
 	viper.SetEnvPrefix(Command)
 	viper.BindEnv("path")
