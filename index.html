@@ -29,33 +29,53 @@
       </header>
       <section>
         <h1>
-<a id="runcom" class="anchor" href="#runcom" aria-hidden="true"><span class="octicon octicon-link"></span></a>Runcom</h1>
+<a id="-runcom" class="anchor" href="#-runcom" aria-hidden="true"><span class="octicon octicon-link"></span></a>
+<a href="http://hansrodtang.github.io/runcom/"><img src="http://i.imgur.com/IPUdmyu.png" alt="Logo"></a> Runcom</h1>
 
-<p><a href="https://travis-ci.org/hansrodtang/runcom"><img src="https://img.shields.io/travis/hansrodtang/runcom.svg?style=flat" alt="Build"></a> <a href="https://coveralls.io/r/hansrodtang/runcom"><img src="https://img.shields.io/coveralls/hansrodtang/runcom.svg?style=flat" alt="Coverage"></a> <a href="https://github.com/hansrodtang/runcom/issues"><img src="https://img.shields.io/github/issues/hansrodtang/runcom.svg?style=flat" alt="Issues"></a> <a href="https://gratipay.com/hansrodtang/"><img src="https://img.shields.io/gratipay/hansrodtang.svg?style=flat" alt="Tip"></a>
+<p><a href="https://travis-ci.org/hansrodtang/runcom"><img src="https://img.shields.io/travis/hansrodtang/runcom.svg?style=flat" alt="Build"></a> <a href="https://coveralls.io/r/hansrodtang/runcom"><img src="https://img.shields.io/coveralls/hansrodtang/runcom.svg?style=flat" alt="Coverage"></a> <a href="https://gratipay.com/hansrodtang/"><img src="https://img.shields.io/gratipay/hansrodtang.svg?style=flat" alt="Tip"></a>
 <a href="http://choosealicense.com/licenses/mit/"><img src="http://img.shields.io/badge/license-MIT-blue.svg?style=flat" alt="License"></a>
-<a href="https://github.com/hansrodtang/runcom/wiki"><img src="http://img.shields.io/badge/documentation-wiki-blue.svg?style=flat" alt="Documentation"></a></p>
+<a href="https://github.com/hansrodtang/runcom/wiki"><img src="http://img.shields.io/badge/documentation-wiki-blue.svg?style=flat" alt="Documentation"></a>
+<a href="https://gitter.im/hansrodtang/runcom"><img src="https://img.shields.io/badge/gitter-join%20chat%20%E2%86%92-brightgreen.svg?style=flat" alt="Chat"></a></p>
 
 <p>A <a href="http://dotfiles.github.io/">Dotfiles</a> manager written in <a href="http://golang.org">Go</a>.</p>
 
-<p><strong><img class="emoji" title=":heavy_exclamation_mark:" alt=":heavy_exclamation_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2757.png" height="20" width="20" align="absmiddle"> Still in heavy development and is not ready for usage. Please wait for the 1.0 release <img class="emoji" title=":heavy_exclamation_mark:" alt=":heavy_exclamation_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2757.png" height="20" width="20" align="absmiddle"></strong></p>
+<p><strong><img class="emoji" title=":heavy_exclamation_mark:" alt=":heavy_exclamation_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2757.png" height="20" width="20" align="absmiddle"> Still in heavy development. Not everything in this document is accurate. Please wait for the 1.0 release <img class="emoji" title=":heavy_exclamation_mark:" alt=":heavy_exclamation_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2757.png" height="20" width="20" align="absmiddle"></strong></p>
 
 <h2>
 <a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
 
 <p>Prebuilt executables are available <a href="https://github.com/hansrodtang/runcom/releases">here</a>.</p>
 
+<p>Install with <code>go get</code></p>
+
 <pre><code>  go get github.com/hansrodtang/runcom
 </code></pre>
 
-<p>For those who prefer it, you can also use <a href="http://gopkg.in">gopkg.in</a>:</p>
+<p>For those who prefer stable releases, you can also use <a href="http://gopkg.in">gopkg.in</a>:</p>
 
 <pre><code>  go get gopkg.in/hansrodtang/runcom.v0
+</code></pre>
+
+<p>You can also download a prebuilt executable</p>
+
+<pre><code>  curl -O https://github.com/hansrodtang/runcom/releases
 </code></pre>
 
 <h2>
 <a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
 
-<div class="highlight highlight-sh"><pre>runcom wizard</pre></div>
+<p>Here are some example commands.</p>
+
+<div class="highlight highlight-sh"><pre><span class="pl-c"># Download from GitHub</span>
+runcom get hansrodtang/dotfiles
+<span class="pl-c"># Pull changes from GitHub</span>
+runcom pull hansrodtang/dotfiles
+<span class="pl-c"># Backup local configuration</span>
+runcom backup
+<span class="pl-c"># Upload to GitHub</span>
+runcom push hansrodtang/dotfiles
+<span class="pl-c"># Restore from configuration</span>
+runcom restore</pre></div>
 
 <h2>
 <a id="plugins" class="anchor" href="#plugins" aria-hidden="true"><span class="octicon octicon-link"></span></a>Plugins</h2>
@@ -64,10 +84,32 @@
 <li><a href="https://github.com/hansrodtang/runcom/wiki/Plugins">List of available plugins and documentation</a></li>
 </ul>
 
+<p>Fork this repository and add your own today! Pull requests are welcomed!</p>
+
+<h2>
+<a id="backends" class="anchor" href="#backends" aria-hidden="true"><span class="octicon octicon-link"></span></a>Backends</h2>
+
+<p>Runcom supports storing your configuration in multiple different locations/services.</p>
+
+<ul>
+<li>Git (additional integration with GitHub)</li>
+<li>Dropbox</li>
+<li>Compressed files</li>
+</ul>
+
+<p>More coming.</p>
+
+<h2>
+<a id="naming" class="anchor" href="#naming" aria-hidden="true"><span class="octicon octicon-link"></span></a>Naming</h2>
+
+<p>The name comes from <a href="https://en.wikipedia.org/wiki/Run_commands">Run Commands</a>.</p>
+
 <h2>
 <a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
 
 <p>This software is licensed under the <a href="LICENSE.md">MIT license</a>.</p>
+
+<p>Icon is created by <a href="http://thenounproject.com/ArtZ91/">Arhur Slain</a> and is licensed under <a href="https://creativecommons.org/licenses/by/3.0/us/">Creative Commons – Attribution (CC BY 3.0)</a>.</p>
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/hansrodtang">hansrodtang</a></p>
