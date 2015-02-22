@@ -2,7 +2,10 @@
 
 package homebrew
 
-import "github.com/hansrodtang/runcom/core"
+import (
+	"github.com/hansrodtang/runcom/core"
+	"github.com/hansrodtang/runcom/plugins/packages/homebrew/command"
+)
 
 func Restore() {
 	var p plugin
@@ -11,7 +14,7 @@ func Restore() {
 		print(err)
 	}
 
-	SetTaps(p.Taps)
-	InstallCasks(p.Casks)
-	Install(p.Formulas)
+	command.InstallTaps(p.Taps)
+	command.InstallCasks(p.Casks)
+	command.Install(p.Formulas)
 }

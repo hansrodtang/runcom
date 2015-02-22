@@ -1,9 +1,11 @@
 package core
 
 import (
+	"bufio"
 	"fmt"
 	"os"
 	"os/exec"
+	"strings"
 
 	"github.com/fatih/color"
 )
@@ -99,4 +101,26 @@ func Printer(plugin string) PrintFunc {
 		fmt.Println(a...)
 	}
 	return print
+}
+
+type Output struct {
+}
+
+func (o Output) Write(p []byte) (int, error) {
+	//reader, writer := io.Pipe()
+	s := string(p)
+	a := strings.Split(s, "\n")
+	a = a[:len(a)-1]
+	for _, v := range a {
+		fmt.Println("Test", v)
+	}
+
+	f := bufio.NewWriter(os.Stderr)
+	//n, err := writer.Write(p)
+
+	//fmt.Print("test " + b.String())
+	fmt.Fprint(f, "Test")
+	n, err := f.Write(p)
+	//f.Flush()
+	return n, err
 }
