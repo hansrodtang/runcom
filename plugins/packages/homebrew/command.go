@@ -61,9 +61,6 @@ var backupCommand = &cobra.Command{
 	},
 }
 
-	},
-}
-
 func init() {
 	Command.AddCommand(restoreCommand)
 	Command.AddCommand(backupCommand)
