@@ -11,7 +11,7 @@ func Restore() {
 	var p plugin
 	err := core.Get(PluginName, &p)
 	if err != nil {
-		print(err)
+		out.Print(err)
 	}
 
 	command.InstallTaps(p.Taps...)
