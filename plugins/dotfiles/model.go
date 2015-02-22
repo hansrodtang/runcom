@@ -4,8 +4,7 @@ package dotfiles
 
 import (
 	"io/ioutil"
-	"log"
-	"os"
+	"path/filepath"
 
 	"gopkg.in/yaml.v2"
 )
