@@ -12,26 +12,37 @@ import (
 
 const (
 	// ConfigFile represents the file from where the configuration will be loaded.
-	ConfigFile = "./plugins/dotfiles/dotfiles.yml"
-	Name       = "[dotfiles]"
+	ConfigFolder = "./plugins/dotfiles/data"
 )
 
-var search map[string][]string
+type dots struct {
+	Name  string
+	Files []string
+}
 
-var symlink map[string]string
+var links []string
+
+var storage map[string]string
 
 func init() {
-	symlink = make(map[string]string)
+	storage = make(map[string]string)
 
-	logger := log.New(os.Stdout, Name+" ", 0)
-
-	file, readErr := ioutil.ReadFile(ConfigFile)
-	if readErr != nil {
-		logger.Fatalf("Configuration error: %v \n", readErr)
+	files, err := ioutil.ReadDir(ConfigFolder)
+	if err != nil {
+		out.Error(err)
 	}
+	for _, file := range files {
+		var search dots
 
-	parseErr := yaml.Unmarshal(file, &search)
-	if parseErr != nil {
-		logger.Fatalf("Parse error: %v \n", parseErr)
+		data, readErr := ioutil.ReadFile(filepath.Join(ConfigFolder, file.Name()))
+		if readErr != nil {
+			out.Error(readErr)
+		}
+
+		parseErr := yaml.Unmarshal(data, &search)
+		if parseErr != nil {
+			out.Error(parseErr)
+		}
+		links = append(links, search.Files...)
 	}
 }
