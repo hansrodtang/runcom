@@ -10,10 +10,10 @@ import (
 
 const PluginName = "dotfiles"
 
-var print core.PrintFunc
+var out core.Printer
 
 func init() {
-	print = core.Printer(PluginName)
+	out = core.NewPrinter(PluginName)
 }
 
 var Command = &cobra.Command{
@@ -21,7 +21,7 @@ var Command = &cobra.Command{
 	Short: "Manage dotfiles",
 	Long:  `All software has versions. This is Hugo's`,
 	Run: func(cmd *cobra.Command, args []string) {
-		print("Default command")
+		out.Print("Default command")
 	},
 }
 
@@ -30,7 +30,7 @@ var linkCommand = &cobra.Command{
 	Short: "Link a file to storage",
 	Long:  `All software has versions. This is Hugo's`,
 	Run: func(cmd *cobra.Command, args []string) {
-		print("Linking stuff")
+		out.Print("Linking stuff")
 	},
 }
 
@@ -39,7 +39,7 @@ var unlinkCommand = &cobra.Command{
 	Short: "Unlink a file from storage",
 	Long:  `All software has versions. This is Hugo's`,
 	Run: func(cmd *cobra.Command, args []string) {
-		print("Unlinking stuff")
+		out.Print("Unlinking stuff")
 	},
 }
 
