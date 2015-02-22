@@ -3,7 +3,11 @@ package command
 import (
 	"fmt"
 	"os"
+	"io"
 	"os/exec"
+
+	"github.com/hansrodtang/runcom/core"
+	"github.com/kr/pty"
 )
 
 func Install(formulas []string) {
@@ -22,16 +26,14 @@ func install(command, args string, input []string) {
 	for _, a := range input {
 
 		cmd := exec.Command(command, args, a)
+		out := core.NewPrinter("homebrew")
 
-		cmd.Stdin = os.Stdin
-		cmd.Stdout = os.Stdout
-		cmd.Stderr = os.Stderr
-
-		if err := cmd.Start(); err != nil {
-			fmt.Println(err)
+		f, err := pty.Start(cmd)
+		if err != nil {
+			panic(err)
 		}
+		io.Copy(out, f)
 
-		cmd.Wait()
 	}
 
 }
