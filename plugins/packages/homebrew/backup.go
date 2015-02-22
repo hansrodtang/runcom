@@ -12,7 +12,7 @@ func Backup() {
 	taps, tapsErr := command.ListTaps()
 	formulas, formErr := command.List()
 
-	print(caskErr, tapsErr, formErr)
+	out.Print(caskErr, tapsErr, formErr)
 
 	p := plugin{Casks: casks, Taps: taps, Formulas: formulas}
 	core.Add(PluginName, p)
