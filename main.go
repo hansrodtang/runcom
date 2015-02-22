@@ -26,10 +26,6 @@ func main() {
 		Short: core.Name + " is a simple and flexible configuration manager",
 		Long: `A Simple and Flexible Configuration Manager..
 Complete documentation is available at http:/dots.github.io`,
-		Run: func(cmd *cobra.Command, args []string) {
-			// Do Stuff Here
-
-		},
 	}
 
 	mainCmd.PersistentFlags().String("backend", defaultBackend, "Storage backend to use for saving configuration")
