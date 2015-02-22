@@ -1,8 +1,6 @@
 package command
 
 import (
-	"fmt"
-	"os"
 	"io"
 	"os/exec"
 
@@ -10,15 +8,15 @@ import (
 	"github.com/kr/pty"
 )
 
-func Install(formulas []string) {
+func Install(formulas ...string) {
 	install(brewCommand, "install", formulas)
 }
 
-func InstallTaps(taps []string) {
+func InstallTaps(taps ...string) {
 	install(brewCommand, "tap", taps)
 }
 
-func InstallCasks(casks []string) {
+func InstallCasks(casks ...string) {
 	install(caskCommand, "install", casks)
 }
 

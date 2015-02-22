@@ -14,7 +14,7 @@ func Restore() {
 		print(err)
 	}
 
-	command.InstallTaps(p.Taps)
-	command.InstallCasks(p.Casks)
-	command.Install(p.Formulas)
+	command.InstallTaps(p.Taps...)
+	command.InstallCasks(p.Casks...)
+	command.Install(p.Formulas...)
 }
