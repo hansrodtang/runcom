@@ -10,15 +10,14 @@ import (
 )
 
 func Backup() {
-	for _, v := range search {
-		for _, file := range v {
-			absolute, _ := homedir.Expand(file)
-			if core.Valid(absolute) {
-				_, filename := filepath.Split(absolute)
-				symlink[file] = filename
-			}
+	for _, file := range links {
+		absolute, _ := homedir.Expand("~/" + file)
+		if core.Valid(absolute) {
+
+			_, filename := filepath.Split(absolute)
+			storage[file] = filename
 		}
 	}
-	core.Add(PluginName, symlink)
+	core.Add(PluginName, storage)
 	core.Save()
 }

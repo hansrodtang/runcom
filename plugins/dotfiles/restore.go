@@ -5,11 +5,11 @@ package dotfiles
 import "github.com/hansrodtang/runcom/core"
 
 func Restore() {
-	err := core.Get(PluginName, &symlink)
+	err := core.Get(PluginName, &storage)
 	if err != nil {
-		print(err)
+		out.Error(err)
 	}
-	for k, v := range symlink {
-		print(v, "=>", k)
+	for k, v := range storage {
+		out.Print(v, "=>", k)
 	}
 }
