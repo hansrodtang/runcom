@@ -72,3 +72,13 @@ var PackCommand = &cobra.Command{
 
 	},
 }
+
+var PruneCommand = &cobra.Command{
+	Use:   "prune",
+	Short: "Remove stuff not in storage",
+	Long:  `Filler`,
+
+	Run: func(cmd *cobra.Command, args []string) {
+
+	},
+}
