@@ -3,6 +3,7 @@ files:
   - .vim/ftplugin
   - .vim/indent
   - .vimrc
+  - .vim/vimrc
   - .gvimrc.before
   - .vim/autoload
   - .vim/doc
