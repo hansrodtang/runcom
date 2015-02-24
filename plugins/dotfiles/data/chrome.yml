@@ -1,0 +1,4 @@
+name: Chrome
+files:
+  - Library/Application Support/Google/Chrome
+  - Library/Preferences/com.google.Chrome.plist
