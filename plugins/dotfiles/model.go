@@ -31,13 +31,12 @@ func init() {
 		out.Error(err)
 	}
 	for _, file := range files {
-		var search dots
-
 		data, readErr := ioutil.ReadFile(filepath.Join(ConfigFolder, file.Name()))
 		if readErr != nil {
 			out.Error(readErr)
 		}
 
+		var search dots
 		parseErr := yaml.Unmarshal(data, &search)
 		if parseErr != nil {
 			out.Error(parseErr)
