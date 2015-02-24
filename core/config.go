@@ -6,8 +6,8 @@ import (
 	"github.com/mitchellh/go-homedir"
 )
 
-var directory string = "~/.config/runcom"
-var file string = "storage.json"
+var directory = "~/.config/runcom"
+var file = "storage.json"
 
 const Command = "runcom"
 const Name = "Runcom"
