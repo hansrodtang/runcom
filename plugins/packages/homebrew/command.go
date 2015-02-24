@@ -5,33 +5,33 @@ package homebrew
 import (
 	"github.com/hansrodtang/runcom/core"
 	"github.com/hansrodtang/runcom/plugins"
-	"github.com/hansrodtang/runcom/plugins/packages/homebrew/command"
+	"github.com/hansrodtang/runcom/plugins/packages/homebrew/brew"
 	"github.com/spf13/cobra"
 )
 
 const (
-	BrewCmd    = "brew"
-	CaskCmd    = "brew-cask"
-	PluginName = "homebrew"
+	brewCmd    = "brew"
+	caskCmd    = "brew-cask"
+	pluginName = "homebrew"
 )
 
 var out core.Printer
 
 func init() {
-	out = core.NewPrinter(PluginName)
+	out = core.NewPrinter(pluginName)
 }
 
-var Command = &cobra.Command{
+var command = &cobra.Command{
 	Use:   "homebrew",
 	Short: "Manages your Homebrew packages",
 	Long: `Restore and export your Homebrew packages.
 Will ask to install Homebrew if not already installed`,
 
 	Run: func(cmd *cobra.Command, args []string) {
-		if !core.IsInstalled(BrewCmd) {
+		if !core.IsInstalled(brewCmd) {
 			answer := out.Ask("Homebrew is not installed, install now?", true)
 			if answer == true {
-				command.Setup()
+				brew.Setup()
 			}
 		} else {
 			cmd.Usage()
@@ -45,8 +45,8 @@ var restoreCommand = &cobra.Command{
 	Long:  `Restore your Homebrew packages from storage`,
 
 	Run: func(cmd *cobra.Command, args []string) {
-		command.Setup()
-		Restore()
+		brew.Setup()
+		restore()
 	},
 }
 
@@ -56,13 +56,13 @@ var backupCommand = &cobra.Command{
 	Long:  `Backs up your Homebrew packages from storage`,
 
 	Run: func(cmd *cobra.Command, args []string) {
-		command.Setup()
-		Backup()
+		brew.Setup()
+		backup()
 	},
 }
 
 func init() {
-	Command.AddCommand(restoreCommand)
-	Command.AddCommand(backupCommand)
-	plugins.Register(PluginName, Restore, Backup, Command)
+	command.AddCommand(restoreCommand)
+	command.AddCommand(backupCommand)
+	plugins.Register(pluginName, restore, backup, command)
 }

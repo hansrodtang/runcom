@@ -1,4 +1,4 @@
-package command
+package brew
 
 func Outdated() []string {
 	s, _ := list(brewCommand, "outdated")

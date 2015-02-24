@@ -8,15 +8,15 @@ import (
 	"github.com/spf13/cobra"
 )
 
-const PluginName = "dotfiles"
+const pluginName = "dotfiles"
 
 var out core.Printer
 
 func init() {
-	out = core.NewPrinter(PluginName)
+	out = core.NewPrinter(pluginName)
 }
 
-var Command = &cobra.Command{
+var command = &cobra.Command{
 	Use:   "dotfiles",
 	Short: "Manage dotfiles",
 	Long:  `All software has versions. This is Hugo's`,
@@ -48,7 +48,7 @@ var restoreCommand = &cobra.Command{
 	Short: "Restore dotfiles from storage",
 	Long:  `Restore dotfiles from storage`,
 	Run: func(cmd *cobra.Command, args []string) {
-		Restore()
+		restore()
 	},
 }
 
@@ -57,15 +57,15 @@ var backupCommand = &cobra.Command{
 	Short: "Backup dotfiles to storage",
 	Long:  `Backup dotfiles to storage`,
 	Run: func(cmd *cobra.Command, args []string) {
-		Backup()
+		backup()
 	},
 }
 
 func init() {
-	Command.AddCommand(linkCommand)
-	Command.AddCommand(unlinkCommand)
-	Command.AddCommand(restoreCommand)
-	Command.AddCommand(backupCommand)
+	command.AddCommand(linkCommand)
+	command.AddCommand(unlinkCommand)
+	command.AddCommand(restoreCommand)
+	command.AddCommand(backupCommand)
 
-	plugins.Register(PluginName, Restore, Backup, Command)
+	plugins.Register(pluginName, restore, backup, command)
 }

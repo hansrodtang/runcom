@@ -9,7 +9,7 @@ import (
 	"github.com/mitchellh/go-homedir"
 )
 
-func Backup() {
+func backup() {
 	for _, file := range links {
 		absolute, _ := homedir.Expand("~/" + file)
 		if core.Valid(absolute) {
@@ -18,6 +18,6 @@ func Backup() {
 			storage[file] = filename
 		}
 	}
-	core.Add(PluginName, storage)
+	core.Add(pluginName, storage)
 	core.Save()
 }

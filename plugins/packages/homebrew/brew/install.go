@@ -1,4 +1,4 @@
-package command
+package brew
 
 import (
 	"io"

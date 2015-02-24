@@ -4,17 +4,17 @@ package homebrew
 
 import (
 	"github.com/hansrodtang/runcom/core"
-	"github.com/hansrodtang/runcom/plugins/packages/homebrew/command"
+	"github.com/hansrodtang/runcom/plugins/packages/homebrew/brew"
 )
 
-func Restore() {
+func restore() {
 	var p plugin
-	err := core.Get(PluginName, &p)
+	err := core.Get(pluginName, &p)
 	if err != nil {
 		out.Print(err)
 	}
 
-	command.InstallTaps(p.Taps...)
-	command.InstallCasks(p.Casks...)
-	command.Install(p.Formulas...)
+	brew.InstallTaps(p.Taps...)
+	brew.InstallCasks(p.Casks...)
+	brew.Install(p.Formulas...)
 }

@@ -6,10 +6,10 @@ import (
 )
 
 const (
-	PluginName = "scripts"
+	pluginName = "scripts"
 )
 
-var Command = &cobra.Command{
+var command = &cobra.Command{
 	Use:   "scripts",
 	Short: "Store custom scripts",
 	Long:  `Store custom scripts`,
@@ -19,7 +19,7 @@ var Command = &cobra.Command{
 	},
 }
 
-var AddCommand = &cobra.Command{
+var addCommand = &cobra.Command{
 	Use:   "add",
 	Short: "Add script to storage",
 	Long:  `Add script to storage`,
@@ -29,7 +29,7 @@ var AddCommand = &cobra.Command{
 	},
 }
 
-var RemoveCommand = &cobra.Command{
+var removeCommand = &cobra.Command{
 	Use:   "remove",
 	Short: "Remove script from storage",
 	Long:  `Remove script from storage`,
@@ -38,7 +38,7 @@ var RemoveCommand = &cobra.Command{
 	},
 }
 
-var RunCommand = &cobra.Command{
+var runCommand = &cobra.Command{
 	Use:   "run",
 	Short: "Run scripts from storage",
 	Long:  `Run scripts from storage`,
@@ -48,8 +48,8 @@ var RunCommand = &cobra.Command{
 }
 
 func init() {
-	Command.AddCommand(AddCommand)
-	Command.AddCommand(RemoveCommand)
-	Command.AddCommand(RunCommand)
-	plugins.Register(PluginName, nil, nil, Command)
+	command.AddCommand(addCommand)
+	command.AddCommand(removeCommand)
+	command.AddCommand(runCommand)
+	plugins.Register(pluginName, nil, nil, command)
 }

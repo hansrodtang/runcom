@@ -4,8 +4,8 @@ package dotfiles
 
 import "github.com/hansrodtang/runcom/core"
 
-func Restore() {
-	err := core.Get(PluginName, &storage)
+func restore() {
+	err := core.Get(pluginName, &storage)
 	if err != nil {
 		out.Error(err)
 	}
