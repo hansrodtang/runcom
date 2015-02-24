@@ -25,7 +25,7 @@ func main() {
 		Use:   core.Command,
 		Short: core.Name + " is a simple and flexible configuration manager",
 		Long: `A Simple and Flexible Configuration Manager..
-Complete documentation is available at http:/dots.github.io`,
+Complete documentation is available at http:/runcom.github.io`,
 	}
 
 	mainCmd.PersistentFlags().String("backend", defaultBackend, "Storage backend to use for saving configuration")
