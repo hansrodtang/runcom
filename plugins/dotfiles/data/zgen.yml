@@ -1,0 +1,4 @@
+name: ZGen
+files:
+  - .zgen
+  - .zgen.zsh
