@@ -4,7 +4,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/spf13/viper"
+	"github.com/hansrodtang/viper"
 )
 
 var out Printer

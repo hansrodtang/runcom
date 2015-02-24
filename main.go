@@ -11,8 +11,8 @@ import (
 	_ "github.com/hansrodtang/runcom/plugins/dotfiles"
 	_ "github.com/hansrodtang/runcom/plugins/packages/homebrew"
 	// Other dependencies
+	"github.com/hansrodtang/viper"
 	"github.com/spf13/cobra"
-	"github.com/spf13/viper"
 	"golang.org/x/crypto/ssh/terminal"
 )
 
