@@ -18,7 +18,7 @@ func NewCommand(command string, args ...string) Command {
 }
 
 // Install is a command executer for install commands.
-func (c Command) Install(input []string) {
+func (c Command) Install(input ...string) {
 
 	for _, a := range input {
 		args := append(c.args, a)
