@@ -10,7 +10,7 @@ import (
 var out Printer
 
 func init() {
-	out = NewPrinter(Command)
+	out = NewPrinter(command)
 }
 
 func init() {
@@ -18,7 +18,7 @@ func init() {
 	viper.SetDefault("directory", Directory())
 	viper.SetDefault("storage", filepath.Join(Directory(), file))
 
-	viper.SetEnvPrefix(Command)
+	viper.SetEnvPrefix(command)
 	viper.BindEnv("path")
 
 	setup()
@@ -44,7 +44,7 @@ func setup() {
 		if answer {
 			CreateDir(Directory())
 		} else {
-			out.Printf("%s can not run without storage directory\n", Name)
+			out.Printf("%s can not run without storage directory\n", name)
 			os.Exit(1)
 		}
 
