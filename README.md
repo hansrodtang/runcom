@@ -1,6 +1,10 @@
 # [![Logo](http://i.imgur.com/IPUdmyu.png)](http://hansrodtang.github.io/runcom/) Runcom
 
-[![Build](https://img.shields.io/travis/hansrodtang/runcom.svg?style=flat)](https://travis-ci.org/hansrodtang/runcom) [![Coverage](https://img.shields.io/coveralls/hansrodtang/runcom.svg?style=flat)](https://coveralls.io/r/hansrodtang/runcom) [![Tip](https://img.shields.io/gratipay/hansrodtang.svg?style=flat)](https://gratipay.com/hansrodtang/)
+__OSX: [![Travis Build](https://img.shields.io/travis/hansrodtang/runcom.svg?style=flat)](https://travis-ci.org/hansrodtang/runcom) Linux: [![Wercker Build](https://img.shields.io/wercker/ci/803c5515e66c7ea2329cd411d6fa2407.svg?style=flat)](https://app.wercker.com/project/bykey/803c5515e66c7ea2329cd411d6fa2407) Windows: [![AppVeyor Build](https://img.shields.io/appveyor/ci/hansrodtang/runcom.svg?style=flat)](https://ci.appveyor.com/project/hansrodtang/runcom)__
+
+
+
+ [![Coverage](https://img.shields.io/coveralls/hansrodtang/runcom.svg?style=flat)](https://coveralls.io/r/hansrodtang/runcom) [![Tip](https://img.shields.io/gratipay/hansrodtang.svg?style=flat)](https://gratipay.com/hansrodtang/)
 [![License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](http://choosealicense.com/licenses/mit/)
 [![Documentation](http://img.shields.io/badge/documentation-wiki-blue.svg?style=flat)](https://github.com/hansrodtang/runcom/wiki)
 [![Chat](https://img.shields.io/badge/gitter-join%20chat%20%E2%86%92-brightgreen.svg?style=flat)](https://gitter.im/hansrodtang/runcom)
