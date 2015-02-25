@@ -9,8 +9,8 @@ import (
 var directory = "~/.config/runcom"
 var file = "storage.json"
 
-const command = "runcom"
-const name = "Runcom"
+const BinaryName = "runcom"
+const Name = "Runcom"
 
 func Directory() string {
 	dir, err := homedir.Expand(directory)

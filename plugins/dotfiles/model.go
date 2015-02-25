@@ -31,7 +31,7 @@ func init() {
 		out.Error(err)
 	}
 	for _, file := range files {
-		data, readErr := ioutil.ReadFile(filepath.Join(ConfigFolder, file.Name()))
+		data, readErr := ioutil.ReadFile(filepath.Join(configFolder, file.Name()))
 		if readErr != nil {
 			out.Error(readErr)
 		}

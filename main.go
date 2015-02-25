@@ -22,7 +22,7 @@ func main() {
 	viper.SetDefault("backend", defaultBackend)
 
 	var mainCmd = &cobra.Command{
-		Use:   core.Command,
+		Use:   core.BinaryName,
 		Short: core.Name + " is a simple and flexible configuration manager",
 		Long: `A Simple and Flexible Configuration Manager..
 Complete documentation is available at http:/runcom.github.io`,
