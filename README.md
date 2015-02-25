@@ -8,7 +8,7 @@
 | System  | Status | Documentation |
 | --- | :----------: | -------------: |
 | OSX | [![Travis Build](https://img.shields.io/travis/hansrodtang/runcom.svg?style=flat)](https://travis-ci.org/hansrodtang/runcom) | Coming soon |
-| Linux | [![Wercker Build](https://img.shields.io/wercker/ci/803c5515e66c7ea2329cd411d6fa2407.svg?style=flat)](https://app.wercker.com/project/bykey/803c5515e66c7ea2329cd411d6fa2407) | Coming soon |
+| Linux | [![Wercker Build](https://img.shields.io/wercker/ci/54ed3bb6b05d63312300510a.svg?style=flat)](https://app.wercker.com/project/bykey/803c5515e66c7ea2329cd411d6fa2407) | Coming soon |
 | Windows | [![AppVeyor Build](https://img.shields.io/appveyor/ci/hansrodtang/runcom.svg?style=flat)](https://ci.appveyor.com/project/hansrodtang/runcom) | Coming soon |
 
 
