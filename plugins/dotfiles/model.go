@@ -11,7 +11,7 @@ import (
 
 const (
 	// ConfigFile represents the file from where the configuration will be loaded.
-	ConfigFolder = "./plugins/dotfiles/data"
+	configFolder = "./plugins/dotfiles/data"
 )
 
 type dots struct {
@@ -26,7 +26,7 @@ var storage map[string]string
 func init() {
 	storage = make(map[string]string)
 
-	files, err := ioutil.ReadDir(ConfigFolder)
+	files, err := ioutil.ReadDir(configFolder)
 	if err != nil {
 		out.Error(err)
 	}
