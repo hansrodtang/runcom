@@ -70,4 +70,4 @@ The name comes from [Run Commands](https://en.wikipedia.org/wiki/Run_commands).
 
 This software is licensed under the [MIT license](LICENSE.md).
 
-Icon is created by [Arhur Slain](http://thenounproject.com/ArtZ91/) and is licensed under [Creative Commons – Attribution (CC BY 3.0)](https://creativecommons.org/licenses/by/3.0/us/).
+Icon is created by [Arthur Shlain](http://thenounproject.com/ArtZ91/) and is licensed under [Creative Commons – Attribution (CC BY 3.0)](https://creativecommons.org/licenses/by/3.0/us/).
