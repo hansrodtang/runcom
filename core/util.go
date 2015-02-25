@@ -3,7 +3,6 @@ package core
 import (
 	"fmt"
 	"os"
-	"os/exec"
 	"strings"
 
 	"github.com/fatih/color"
@@ -45,14 +44,6 @@ func CreateDir(directory string) bool {
 		return false
 	}
 
-	return true
-}
-
-func IsInstalled(command string) bool {
-	_, err := exec.LookPath(command)
-	if err != nil {
-		return false
-	}
 	return true
 }
 
