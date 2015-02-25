@@ -5,7 +5,6 @@ package homebrew
 import (
 	"github.com/hansrodtang/runcom/core"
 	"github.com/hansrodtang/runcom/plugins"
-	"github.com/hansrodtang/runcom/plugins/packages/homebrew/brew"
 	"github.com/spf13/cobra"
 )
 
@@ -31,7 +30,7 @@ Will ask to install Homebrew if not already installed`,
 		if !core.IsInstalled(brewCmd) {
 			answer := out.Ask("Homebrew is not installed, install now?", true)
 			if answer == true {
-				brew.Setup()
+				setup()
 			}
 		} else {
 			cmd.Usage()
@@ -45,7 +44,7 @@ var restoreCommand = &cobra.Command{
 	Long:  `Restore your Homebrew packages from storage`,
 
 	Run: func(cmd *cobra.Command, args []string) {
-		brew.Setup()
+		setup()
 		restore()
 	},
 }
@@ -56,7 +55,7 @@ var backupCommand = &cobra.Command{
 	Long:  `Backs up your Homebrew packages from storage`,
 
 	Run: func(cmd *cobra.Command, args []string) {
-		brew.Setup()
+		setup()
 		backup()
 	},
 }

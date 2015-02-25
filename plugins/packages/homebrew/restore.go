@@ -2,10 +2,7 @@
 
 package homebrew
 
-import (
-	"github.com/hansrodtang/runcom/core"
-	"github.com/hansrodtang/runcom/plugins/packages/homebrew/brew"
-)
+import "github.com/hansrodtang/runcom/core"
 
 func restore() {
 	var p plugin
@@ -14,7 +11,13 @@ func restore() {
 		out.Print(err)
 	}
 
-	brew.InstallTaps(p.Taps...)
-	brew.InstallCasks(p.Casks...)
-	brew.Install(p.Formulas...)
+	tapsCmd := core.NewCommand(brewCommand, "tap")
+	tapsCmd.Install(p.Taps...)
+
+	casksCmd := core.NewCommand(caskCommand, "install")
+	casksCmd.Install(p.Casks...)
+
+	formulasCmd := core.NewCommand(brewCommand, "install")
+	formulasCmd.Install(p.Formulas...)
+
 }

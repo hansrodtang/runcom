@@ -2,15 +2,12 @@
 
 package homebrew
 
-import (
-	"github.com/hansrodtang/runcom/core"
-	"github.com/hansrodtang/runcom/plugins/packages/homebrew/brew"
-)
+import "github.com/hansrodtang/runcom/core"
 
 func backup() {
-	casks, caskErr := brew.ListCasks()
-	taps, tapsErr := brew.ListTaps()
-	formulas, formErr := brew.List()
+	casks, caskErr := core.NewCommand(caskCommand, "list").List()
+	taps, tapsErr := core.NewCommand(brewCommand, "tap").List()
+	formulas, formErr := core.NewCommand(brewCommand, "leaves").List()
 
 	out.Print(caskErr, tapsErr, formErr)
 
