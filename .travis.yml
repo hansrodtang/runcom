@@ -2,8 +2,17 @@ language: go
 go:
 - tip
 before_script:
-- go get golang.org/x/tools/cmd/cover
-- go get github.com/axw/gocov/gocov
-- go get github.com/mattn/goveralls
+  - go get golang.org/x/tools/cmd/cover
+  - go get github.com/axw/gocov/gocov
+  - go get github.com/modocache/gover
+  - go get github.com/mattn/goveralls
 script:
-- $HOME/gopath/bin/goveralls -service=travis-ci
+  - go test -coverprofile=core.coverprofile ./core
+  - go test -coverprofile=backends.coverprofile ./backends
+  - go test -coverprofile=directory.coverprofile ./backends/directory
+  - go test -coverprofile=plugins.coverprofile ./plugins
+  - go test -coverprofile=dotfiles.coverprofile ./plugins/dotfiles
+  - go test -coverprofile=homebrew.coverprofile ./plugins/packages/homebrew
+  - go test -coverprofile=main.coverprofile
+  - $HOME/gopath/bin/gover
+  - $HOME/gopath/bin/goveralls -service=travis-ci
