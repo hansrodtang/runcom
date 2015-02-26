@@ -1,32 +1,44 @@
-package backend
+package backends
 
 import "errors"
+
+var backends map[string]Backend
 
 func init() {
 	backends = make(map[string]Backend)
 }
 
-type ReadFunc func()
-type SaveFunc func()
+var backend Backend
 
-type Backend struct {
-	Name string
-	Read ReadFunc
-	Save SaveFunc
+// Make a ignore file, to force files to not be used on a computer.
+
+type Backend interface {
+	Init() error                                  // Backend initialization (Create directory etc.)
+	Read() error                                  // Read configuration
+	Save() error                                  // Save configuration
+	Link(string) error                            // Add item to storage
+	Unlink(string) error                          // Remove item from storage, put back to original place
+	Restore(string) error                         // Create link from storage to location. (Or copy, depends on backend).
+	Remove()                                      // Remove item from machine but not storage
+	Get(plugin string, content interface{}) error // Get plugin configuration
+	Add(string, interface{}) error                // Add new plugin configuration
 }
 
-var backends map[string]Backend
-
-func Register(name string, read ReadFunc, save SaveFunc) {
-	backends[name] = Backend{name, read, save}
+func Register(name string, be Backend) {
+	backends[name] = be
 }
 
-func Get(name string) (Backend, error) {
+func Get() Backend {
+	return backend
+}
+
+func Select(name string) error {
 	b, ok := backends[name]
 	if !ok {
-		return Backend{}, errors.New("no backend found")
+		return errors.New("no backend found")
 	}
-	return b, nil
+	backend = b
+	return nil
 }
 
 func GetAll() map[string]Backend {
