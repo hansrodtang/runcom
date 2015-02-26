@@ -10,6 +10,6 @@ const TestDirectory = "./test/"
 
 //
 func TestInit(t *testing.T) {
-	d := directory.NewBackend(TestDirectory)
+	/*d :=*/ directory.NewBackend(TestDirectory)
 
 }
