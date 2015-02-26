@@ -2,11 +2,17 @@
 
 package homebrew
 
-import "github.com/hansrodtang/runcom/core"
+import (
+	"github.com/hansrodtang/runcom/backends"
+	"github.com/hansrodtang/runcom/core"
+)
 
 func restore() {
+	storage := backends.Get()
+	storage.Read()
+
 	var p plugin
-	err := core.Get(pluginName, &p)
+	err := storage.Get(pluginName, &p)
 	if err != nil {
 		out.Print(err)
 	}

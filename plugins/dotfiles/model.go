@@ -21,10 +21,10 @@ type dots struct {
 
 var links []string
 
-var storage map[string]string
+var model map[string]string
 
 func init() {
-	storage = make(map[string]string)
+	model = make(map[string]string)
 
 	files, err := ioutil.ReadDir(configFolder)
 	if err != nil {

@@ -2,14 +2,17 @@
 
 package dotfiles
 
-import "github.com/hansrodtang/runcom/core"
+import "github.com/hansrodtang/runcom/backends"
 
 func restore() {
-	err := core.Get(pluginName, &storage)
+	storage := backends.Get()
+	storage.Read()
+
+	err := storage.Get(pluginName, &model)
 	if err != nil {
 		out.Error(err)
 	}
-	for k, v := range storage {
+	for k, v := range model {
 		out.Print(v, "=>", k)
 	}
 }
