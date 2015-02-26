@@ -1,9 +1,7 @@
 package core
 
-type PluginNotFoundError struct {
-	msg string
-}
+type PluginNotFoundError string
 
 func (e PluginNotFoundError) Error() string {
-	return e.msg
+	return string(e)
 }
