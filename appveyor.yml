@@ -14,7 +14,16 @@ install:
   - go version
   - go env
   - go get -v -t ./...
+  - go get golang.org/x/tools/cmd/cover
+  - go get github.com/axw/gocov/gocov
+  - go get github.com/modocache/gover
 
 build_script:
   - go build
+  - go test -coverprofile=core.coverprofile ./core
+  - go test -coverprofile=backends.coverprofile ./backends
+  - go test -coverprofile=directory.coverprofile ./backends/directory
+  - go test -coverprofile=plugins.coverprofile ./plugins
+  - go test -coverprofile=main.coverprofile
+  - $HOME/gopath/bin/gover
   - go test -v ./...
