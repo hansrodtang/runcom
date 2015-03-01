@@ -31,10 +31,6 @@ For those who prefer stable releases, you can also use [gopkg.in](http://gopkg.i
 ```
   go get gopkg.in/hansrodtang/runcom.v0
 ```
-You can also download a prebuilt executable
-```
-  curl -O https://github.com/hansrodtang/runcom/releases
-```
 
 ## Usage
 Here are some example commands.
