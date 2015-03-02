@@ -14,6 +14,10 @@ build:
           cd $WERCKER_SOURCE_DIR
           go version
           go get -t ./...
+          go get golang.org/x/tools/cmd/cover
+          go get github.com/axw/gocov/gocov
+          go get github.com/modocache/gover
+          go get github.com/mattn/goveralls
 
     # Build the project
     - script:
