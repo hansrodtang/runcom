@@ -1,6 +1,6 @@
 language: go
 go:
-- tip
+- 1.4
 before_script:
   - go get golang.org/x/tools/cmd/cover
   - go get github.com/axw/gocov/gocov
