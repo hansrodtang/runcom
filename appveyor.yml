@@ -19,6 +19,7 @@ install:
   - go get github.com/modocache/gover
 
 build_script:
+  - echo "Starting build"
   - go build
   - go test -coverprofile=core.coverprofile ./core
   - go test -coverprofile=backends.coverprofile ./backends
