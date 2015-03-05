@@ -14,6 +14,7 @@ import (
 	// Plugins
 	_ "github.com/hansrodtang/runcom/plugins/dotfiles"
 	_ "github.com/hansrodtang/runcom/plugins/packages/homebrew"
+	_ "github.com/hansrodtang/runcom/plugins/scripts"
 	// Other dependencies
 	"github.com/hansrodtang/viper"
 	"github.com/spf13/cobra"
