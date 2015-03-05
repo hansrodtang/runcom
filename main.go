@@ -11,6 +11,7 @@ import (
 	"github.com/hansrodtang/runcom/plugins"
 	// Backend
 	_ "github.com/hansrodtang/runcom/backends/directory"
+	_ "github.com/hansrodtang/runcom/backends/git"
 	// Plugins
 	_ "github.com/hansrodtang/runcom/plugins/dotfiles"
 	_ "github.com/hansrodtang/runcom/plugins/packages/homebrew"
