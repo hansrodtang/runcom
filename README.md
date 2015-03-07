@@ -15,7 +15,7 @@
 
 A [Dotfiles](http://dotfiles.github.io/) manager written in [Go](http://golang.org).
 
-__:heavy_exclamation_mark: Still in heavy development. Not everything in this document is accurate. Please wait for the 1.0 release :heavy_exclamation_mark:__
+__:heavy_exclamation_mark: Still in heavy development. Not everything in this document is accurate. Please wait for the 0.1 release :heavy_exclamation_mark:__
 
 ## Installation
 
