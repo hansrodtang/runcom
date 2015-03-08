@@ -62,7 +62,7 @@ Runcom supports storing your configuration in multiple different locations/servi
 - Dropbox
 - Compressed files
 
-More coming.
+More coming soon.
 
 ## Naming
 
