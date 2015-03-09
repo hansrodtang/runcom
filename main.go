@@ -17,7 +17,6 @@ import (
 	// Other dependencies
 	"github.com/hansrodtang/viper"
 	"github.com/spf13/cobra"
-	//"golang.org/x/crypto/ssh/terminal"
 )
 
 const defaultBackend = "directory"
@@ -63,12 +62,6 @@ Complete documentation is available at http:/runcom.github.io`,
 		core.GetCommand,
 		core.UnpackCommand,
 		core.PackCommand)
-
-	// if !terminal.IsTerminal(int(os.Stdout.Fd())) {
-	// 	var test io.Writer
-	// 	test = bufio.NewWriter(test)
-	// 	mainCmd.SetOutput(test)
-	// }
 
 	mainCmd.Execute()
 }
