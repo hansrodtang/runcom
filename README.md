@@ -1,6 +1,6 @@
 # [![Logo](http://i.imgur.com/IPUdmyu.png)](http://hansrodtang.github.io/runcom/) Runcom
 
- [![Coverage](https://img.shields.io/coveralls/hansrodtang/runcom.svg?style=flat)](https://coveralls.io/r/hansrodtang/runcom) [![Tip](https://img.shields.io/gratipay/hansrodtang.svg?style=flat)](https://gratipay.com/hansrodtang/)
+ [![Coverage](https://img.shields.io/coveralls/hansrodtang/runcom.svg?style=flat)](https://coveralls.io/r/hansrodtang/runcom)
 [![License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](http://choosealicense.com/licenses/mit/)
 [![Documentation](http://img.shields.io/badge/documentation-wiki-blue.svg?style=flat)](https://github.com/hansrodtang/runcom/wiki)
 [![Chat](https://img.shields.io/badge/gitter-join%20chat%20%E2%86%92-brightgreen.svg?style=flat)](https://gitter.im/hansrodtang/runcom)
